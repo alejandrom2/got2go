@@ -25,12 +25,12 @@ export default function AvailableInFullVersionScreen(props) {
 
   return (
     <ImageBackground
-      source={require('../../assets/images/background.png')}
+      source={require('../../assets/images/Background2.png')}
       style={styles.container}
     >
       <Image
-        source={require('../../assets/images/RNS_nerd.png')}
-        style={styles.nerdImage}
+        source={require('../../assets/images/Logo.png')}
+        style={styles.centerLogo}
       />
 
       <View style={styles.textContainer}>
@@ -70,14 +70,14 @@ const styles = StyleSheet.create({
     paddingVertical: 50,
     justifyContent: 'space-around',
   },
-  nerdImage: {
-    width: 80,
-    height: 80,
+  centerLogo: {
+    width: 200,
+    height: 200,
   },
   availableText: {
     color: Colors.white,
     fontFamily: Fonts.primaryRegular,
-    fontSize: 40,
+    fontSize: 30,
     marginVertical: 3,
   },
   textContainer: {

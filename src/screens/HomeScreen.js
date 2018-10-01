@@ -31,16 +31,16 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require('../../assets/images/background.png')}
+        source={require('../../assets/images/Background2.png')}
         style={styles.bgImage}
         resizeMode="cover"
       >
         <View style={styles.section}>
-          <Text size={20} white>Home</Text>
+          <Text size={20} white>Ghazal</Text>
         </View>
         <View style={styles.section}>
           <Text color="#19e7f7" size={15}>The smartest Way to build your mobile app</Text>
-          <Text size={30} bold white style={styles.title}>React Native Starter</Text>
+          <Text size={30} bold white style={styles.title}>Ghazal</Text>
         </View>
         <View style={[styles.section, styles.sectionLarge]}>
           <Text color="#19e7f7" hCenter size={15} style={styles.description}> A powerful starter project that bootstraps development of your mobile application and saves you $20 000*</Text>

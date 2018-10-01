@@ -79,7 +79,7 @@ export default class AuthScreen extends React.Component {
     return (
       <View style={[styles.container, { paddingBottom: this.state.isKeyboardVisible ? 220 : 0 }]}>
         <ImageBackground
-          source={require('../../assets/images/background.png')}
+          source={require('../../assets/images/Background2.png')}
           style={styles.backgroundImage}
           resizeMode="cover"
         >
@@ -88,7 +88,7 @@ export default class AuthScreen extends React.Component {
           <Animated.Image
             resizeMode="contain"
             style={[styles.logo, this.state.isKeyboardVisible && { height: 90 }, this.fadeIn(0)]}
-            source={require('../../assets/images/white-logo.png')}
+            source={require('../../assets/images/Logo2.png')}
           />
         </View>
 
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   logo: {
-    height: 150,
+    height: 250,
   },
   socialLoginContainer: {
     flexDirection: 'row',
