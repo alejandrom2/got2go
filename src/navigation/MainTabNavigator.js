@@ -17,7 +17,7 @@ const iconGrids = require('../../assets/images/tabbar/grids.png');
 const iconPages = require('../../assets/images/tabbar/pages.png');
 const iconComponents = require('../../assets/images/tabbar/components.png');
 
-const hederBackground = require('../../assets/images/topBarBg.png');
+const hederBackground = require('../../assets/images/TopBar.png');
 
 
 
@@ -87,7 +87,7 @@ export default TabNavigator(
             <Image
               style={styles.headerImage}
               source={hederBackground} />
-            <Text style={styles.headerCaption}>Grids</Text>
+            <Text style={styles.headerCaption}>Grids</Text>  
           </View>
         ),
       },
