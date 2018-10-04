@@ -35,6 +35,10 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
         style={styles.bgImage}
         resizeMode="cover"
       >
+      <Image
+        source={require('../../assets/images/Logo.png')}
+        style={styles.centerLogo}
+      />
         <View style={styles.section}>
           <Text size={20} white>Ghazal</Text>
         </View>
@@ -63,6 +67,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'space-around',
+  },
+ 
+  centerLogo: {
+    width: 200,
+    height: 200,
   },
   bgImage: {
     flex: 1,

@@ -32,13 +32,11 @@ export default function AvailableInFullVersionScreen(props) {
         source={require('../../assets/images/Logo.png')}
         style={styles.centerLogo}
       />
-
-      <View style={styles.textContainer}>
-        <Text style={styles.availableText}>Available</Text>
-        <Text style={styles.availableText}>in</Text>
-        <Text style={styles.availableText}>Full Version</Text>
-      </View>
-
+<Image
+        source={require('../../assets/images/slogan.png')}
+        style={styles.centerSlogan}
+      />
+      
       <View style={styles.buttonsContainer}>
         <Button
           large
@@ -71,8 +69,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   centerLogo: {
-    width: 200,
-    height: 200,
+    width: 350,
+    height: 350,
+  },
+  centerSlogan: {
+    width: 300,
+    height: 150,
   },
   availableText: {
     color: Colors.white,

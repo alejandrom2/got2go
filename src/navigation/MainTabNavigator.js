@@ -11,11 +11,11 @@ import GridsScreen from '../containers/GridsScreen';
 import PagesScreen from '../containers/PagesScreen';
 import ComponentsScreen from '../containers/ComponentsScreen';
 
-const iconHome = require('../../assets/images/tabbar/home.png');
-const iconCalendar = require('../../assets/images/tabbar/calendar.png');
-const iconGrids = require('../../assets/images/tabbar/grids.png');
-const iconPages = require('../../assets/images/tabbar/pages.png');
-const iconComponents = require('../../assets/images/tabbar/components.png');
+const iconHome = require('../../assets/images/home.png');
+const iconCalendar = require('../../assets/images/map.png');
+const iconGrids = require('../../assets/images/search.png');
+const iconPages = require('../../assets/images/settings.png');
+const iconComponents = require('../../assets/images/settings.png');
 
 const hederBackground = require('../../assets/images/TopBar.png');
 
