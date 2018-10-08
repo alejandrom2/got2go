@@ -1,4 +1,4 @@
-const START_ITEMS_LOADING = 'CalendarState/START_ITEMS_LOADING';
+/*const START_ITEMS_LOADING = 'CalendarState/START_ITEMS_LOADING';
 const ITEMS_LOADED = 'CalendarState/ITEMS_LOADED';
 const LOADING_FAILED = 'CalendarState/LOADING_FAILED';
 
@@ -75,3 +75,4 @@ export default function CalendarStateReducer(state = defaultState, action) {
       return state;
   }
 }
+*/

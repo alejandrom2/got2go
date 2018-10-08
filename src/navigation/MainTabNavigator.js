@@ -6,13 +6,15 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import { Colors, Fonts } from '../constants';
 
 import HomeScreen from '../containers/HomeScreen';
-import CalendarScreen from '../containers/CalendarScreen';
+import MapScreen from '../containers/MapScreen';
+//import MapScreen from '../containers/MapScreen'; //modified
 import GridsScreen from '../containers/GridsScreen';
 import PagesScreen from '../containers/PagesScreen';
 import ComponentsScreen from '../containers/ComponentsScreen';
 
 const iconHome = require('../../assets/images/tabbar/home.png');
 const iconCalendar = require('../../assets/images/tabbar/calendar.png');
+//const iconMaps = require('../../assets/images/tabbar/map.png');
 const iconGrids = require('../../assets/images/tabbar/grids.png');
 const iconPages = require('../../assets/images/tabbar/pages.png');
 const iconComponents = require('../../assets/images/tabbar/components.png');
@@ -66,19 +68,33 @@ export default TabNavigator(
         header: null,
       },
     },
-    Calendar: {
-      screen: CalendarScreen,
+    Maps: {
+      screen: MapScreen, //modified
       navigationOptions: {
         header: (
           <View style={styles.headerContainer}>
             <Image
               style={styles.headerImage}
               source={hederBackground} />
-            <Text style={styles.headerCaption}>Calendar</Text>
+            <Text style={styles.headerCaption}>Map</Text>
           </View>
         ),
       },
     },
+    //TO DO: Figure out who's calling Calendar
+    Calendar: {
+      screen: MapScreen, //modified
+      navigationOptions: {
+        header: (
+          <View style={styles.headerContainer}>
+            <Image
+              style={styles.headerImage}
+              source={hederBackground} />
+            <Text style={styles.headerCaption}>Map</Text>
+          </View>
+        ),
+    },
+},
     Grids: {
       screen: GridsScreen,
       navigationOptions: {
@@ -87,7 +103,7 @@ export default TabNavigator(
             <Image
               style={styles.headerImage}
               source={hederBackground} />
-            <Text style={styles.headerCaption}>Grids</Text>  
+            <Text style={styles.headerCaption}>Grids</Text>
           </View>
         ),
       },
@@ -129,7 +145,7 @@ export default TabNavigator(
           case 'Home':
             iconSource = iconHome;
             break;
-          case 'Calendar':
+          case 'Maps':
             iconSource = iconCalendar;
             break;
           case 'Grids':
@@ -174,4 +190,3 @@ export default TabNavigator(
     },
   },
 );
-
