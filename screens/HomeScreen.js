@@ -11,7 +11,10 @@ export default class HomeScreen extends Component {
   };
 
   componentWillMount() {
-    Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
+    let status = Permissions.askAsync(Permissions.LOCATION);
+    if (status !== 'granted') {
+      Location.watchPositionAsync(GEOLOCATION_OPTIONS, this.locationChanged);
+    }
   }
 
   locationChanged = (location) => {
@@ -19,7 +22,7 @@ export default class HomeScreen extends Component {
       latitude: location.coords.latitude,
       longitude: location.coords.longitude,
       latitudeDelta: 0.001,
-      longitudeDelta: 0.05,
+      longitudeDelta: 0.001,
     },
     this.setState({location, region})
   }
