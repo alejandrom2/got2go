@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "490project",
-    "description": "A very interesting project.",
-    "slug": "490project",
+    "name": "Got2Go",
+    "description": "A somewhat interesting project.",
+    "slug": "Got2Go",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": ["ios", "android"],
