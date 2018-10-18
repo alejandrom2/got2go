@@ -1,7 +1,7 @@
 // @flow
 export default {
-  primaryLight: 'Lato-Light',
-  primaryRegular: 'Lato-Regular',
-  primaryBold: 'Lato-Bold',
-  primarySemiBold: 'Lato-SemiBold',
+  primaryLight: 'space-mono',
+  primaryRegular: 'space-mono',
+  primaryBold: 'space-mono',
+  primarySemiBold: 'space-mono',
 };

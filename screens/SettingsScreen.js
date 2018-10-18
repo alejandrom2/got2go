@@ -1,6 +1,6 @@
 import React from 'react';
-import { AsyncStorage } from 'react-native';
-import { ExpoConfigView } from '@expo/samples';
+import { AsyncStorage, View } from 'react-native';
+import { Button } from '../components';
 
 export default class SettingsScreen extends React.Component {
   static navigationOptions = {
@@ -13,7 +13,16 @@ export default class SettingsScreen extends React.Component {
     
     // TODO: Add a button that calls _signOutAsync
     
-    return <ExpoConfigView />;
+    return(
+    <View>
+      <Button
+        secondary
+        rounded
+        style={{ alignSelf: 'stretch', marginBottom: 10, }}
+        caption={'Logout'}
+        onPress={this._signOutAsync}
+      />
+    </View>);
   }
 
 

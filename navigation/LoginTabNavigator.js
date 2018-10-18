@@ -5,7 +5,7 @@ import {
     View,
 } from 'react-native';
 
-class LoginTabNavigator extends React.Component {
+export default class LoginTabNavigator extends React.Component {
     constructor(props) {
         super(props);
         this._bootstrapAsync();
@@ -23,7 +23,7 @@ class LoginTabNavigator extends React.Component {
     // Render any loading content that you like here
     render() {
         return (
-            <View style={styles.container}>
+            <View>
                 
             </View>
         );
