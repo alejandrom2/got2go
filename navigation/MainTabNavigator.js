@@ -9,6 +9,7 @@ import SettingsScreen from '../screens/SettingsScreen';
 import LoginTabNavigator from './LoginTabNavigator';
 const iconCalendar = require('../assets/images/home.png');
 const iconMap = require('../assets/images/map.png');
+const iconSettings = require('../assets/images/settings.png');
 
 const LoginStack = createStackNavigator({
   Login: LoginTabNavigator,
@@ -64,10 +65,11 @@ const styles = StyleSheet.create({
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+  tabBarLabel: 'Map',
   tabBarIcon: ({ focused }) => (
-    <Image resizeMode="contain" source={iconCalendar}
+    <Image resizeMode="contain" source={iconMap}
     style={[ styles.tabBarIcon, focused && styles.tabBarIconFocused ]} />
+    
   ),
 };
 
@@ -76,9 +78,9 @@ const LinksStack = createStackNavigator({
 });
 
 LinksStack.navigationOptions = {
-  tabBarLabel: 'Map',
+  tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
-    <Image resizeMode="contain" source={iconMap}
+    <Image resizeMode="contain" source={iconCalendar}
     style={[ styles.tabBarIcon, focused && styles.tabBarIconFocused ]} />
   ),
 };
@@ -90,10 +92,8 @@ const SettingsStack = createStackNavigator({
 SettingsStack.navigationOptions = {
   tabBarLabel: 'Settings',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
-    />
+    <Image resizeMode="contain" source={iconSettings}
+    style={[ styles.tabBarIcon, focused && styles.tabBarIconFocused ]} />
   ),
 };
 

@@ -1,69 +1,182 @@
 import Expo from 'expo';
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Platform, Text, View, ScrollView, Animated, Image, Dimensions } from 'react-native';
+import { AppRegistry, StyleSheet, Platform, Text, View, ScrollView, Animated, Image, Dimensions, Alert, TouchableHighlight } from 'react-native';
 import { Constants, Location, Permissions } from 'expo';
 
 const GEOLOCATION_OPTIONS = { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 };
 
-const Images = [
-  { uri: "https://i.imgur.com/sNam9iJ.jpg" },
-  { uri: "https://i.imgur.com/N7rlQYt.jpg" },
-  { uri: "https://i.imgur.com/UDrH0wm.jpg" },
-  { uri: "https://i.imgur.com/Ka8kNST.jpg" }
-]
-
 const { width, height } = Dimensions.get("window");
 
-const CARD_HEIGHT = height / 4;
-const CARD_WIDTH = CARD_HEIGHT - 50;
+const CARD_HEIGHT = 60;
+const CARD_WIDTH = 100;
 
 
 export default class HomeScreen extends Component {
   state = {
     markers: [
       {
-        coordinate: {
-          latitude: 45.524548,
-          longitude: -122.6749817,
-        },
-        title: "Best Place",
-        description: "This is the best place in Portland",
-        image: Images[0],
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241297,
+              longitude: -118.529213
+          }
       },
       {
-        coordinate: {
-          latitude: 45.524698,
-          longitude: -122.6655507,
-        },
-        title: "Second Best Place",
-        description: "This is the second best place in Portland",
-        image: Images[1],
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241326,
+              longitude: -118.529198
+          }
       },
       {
-        coordinate: {
-          latitude: 45.5230786,
-          longitude: -122.6701034,
-        },
-        title: "Third Best Place",
-        description: "This is the third best place in Portland",
-        image: Images[2],
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241695,
+              longitude: -118.529216
+          }
       },
       {
-        coordinate: {
-          latitude: 45.521016,
-          longitude: -122.6561917,
-        },
-        title: "Fourth Best Place",
-        description: "This is the fourth best place in Portland",
-        image: Images[3],
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241662,
+              longitude: -118.529190
+          }
       },
-    ],
-    region: {
-      latitude: 45.52220671242907,
-      longitude: -122.6653281029795,
-      latitudeDelta: 0.04864195044303443,
-      longitudeDelta: 0.040142817690068,
-    },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241564,
+              longitude: -118.528346
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241582,
+              longitude: -118.528322
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241092,
+              longitude: -118.528571
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241094,
+              longitude: -118.528564
+          }
+      },
+
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241323,
+              longitude: -118.529220
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241350,
+              longitude: -118.529217
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241258,
+              longitude: -118.528136
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241216,
+              longitude: -118.528154
+          }
+      },
+
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241205,
+              longitude: -118.529227
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241210,
+              longitude: -118.529211
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241162,
+              longitude: -118.528027
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241176,
+              longitude: -118.528020
+          }
+      },
+
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241205,
+              longitude: -118.529227
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241210,
+              longitude: -118.529211
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241162,
+              longitude: -118.528027
+          }
+      },
+      {
+          title: "Restroom",
+          description: "⭐️⭐️⭐️⭐️",
+          coordinate: {
+              latitude:34.241198,
+              longitude: -118.528100
+          }
+      }],
     location: { coords: {latitude: 0, longitude: 0}},
   };
 
@@ -96,8 +209,8 @@ export default class HomeScreen extends Component {
           this.map.animateToRegion(
             {
               ...coordinate,
-              latitudeDelta: this.state.region.latitudeDelta,
-              longitudeDelta: this.state.region.longitudeDelta,
+              latitudeDelta: 0.001,
+              longitudeDelta: 0.001,
             },
             350
           );
@@ -106,6 +219,18 @@ export default class HomeScreen extends Component {
     });
   }
 
+onMarkerClick(event) {
+    Alert.alert(
+    'Test Alert Title',
+    'My Alert Msg',
+    [
+      {text: 'Ask me later', onPress: () => console.log('Ask me later pressed')},
+      {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+      {text: 'OK', onPress: () => console.log('OK Pressed')},
+    ],
+    { cancelable: false }
+  )
+};
 
   locationChanged = (location) => {
     region = {
@@ -151,7 +276,16 @@ export default class HomeScreen extends Component {
               description={marker.description}
               pinColor="green"
               key={index}
-              coordinate={marker.coordinate} />
+              coordinate={marker.coordinate}
+               >
+               <Expo.MapView.Callout onPress={() => this.onMarkerClick()}>
+                  <TouchableHighlight underlayColor='#dddddd'>
+                      <View style={styles.calloutText}>
+                          <Text>{marker.title}{"\n"}{marker.description}</Text>
+                      </View>
+                  </TouchableHighlight>
+                </Expo.MapView.Callout>
+             </Expo.MapView.Marker>
             );
           })}
         </Expo.MapView>
@@ -177,11 +311,6 @@ export default class HomeScreen extends Component {
         >
           {this.state.markers.map((marker, index) => (
             <View style={styles.card} key={index}>
-              <Image
-                source={marker.image}
-                style={styles.cardImage}
-                resizeMode="cover"
-              />
               <View style={styles.textContent}>
                 <Text numberOfLines={1} style={styles.cardtitle}>{marker.title}</Text>
                 <Text numberOfLines={1} style={styles.cardDescription}>
