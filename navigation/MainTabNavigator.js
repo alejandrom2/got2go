@@ -6,8 +6,21 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import LoginTabNavigator from './LoginTabNavigator';
 const iconCalendar = require('../assets/images/home.png');
 const iconMap = require('../assets/images/map.png');
+
+const LoginStack = createStackNavigator({
+  Login: LoginTabNavigator,
+});
+
+LoginStack.navigationOptions = {
+  tabBarLabel: 'Login',
+  tabBarIcon: ({ focused }) => (
+    <Image resizeMode="contain" source={iconCalendar}
+      style={[styles.tabBarIcon, focused && styles.tabBarIconFocused]} />
+  ),
+};
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
