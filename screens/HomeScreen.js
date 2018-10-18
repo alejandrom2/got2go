@@ -146,12 +146,12 @@ export default class HomeScreen extends Component {
         >
         {this.state.markers.map((marker, index) => {
             return (
-              <Expo.MapView.Marker key={index} coordinate={marker.coordinate}>
-                <Animated.View style={[styles.markerWrap]}>
-                  <Animated.View style={[styles.ring]} />
-                  <View style={styles.marker} />
-                </Animated.View>
-              </Expo.MapView.Marker>
+              <Expo.MapView.Marker 
+              title={marker.title}
+              description={marker.description}
+              pinColor="green"
+              key={index}
+              coordinate={marker.coordinate} />
             );
           })}
         </Expo.MapView>
