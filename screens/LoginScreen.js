@@ -80,16 +80,16 @@ export default class LoginScreen extends React.Component {
         return (
             <View style={[styles.container, { paddingBottom: this.state.isKeyboardVisible ? 220 : 0 }]}>
                 <ImageBackground
-                    source={require('../../assets/images/Background2.png')}
+                    source={require('../assets/images/splash.png')}
                     style={styles.backgroundImage}
                     resizeMode="cover"
                 >
-
+                
                     <View style={[styles.section, { paddingTop: 30 }]}>
                         <Animated.Image
                             resizeMode="contain"
                             style={[styles.logo, this.state.isKeyboardVisible && { height: 90 }, this.fadeIn(0)]}
-                            source={require('../../assets/images/Logo2.png')}
+                            source={require('../assets/images/icon.png')}
                         />
                     </View>
 
@@ -126,31 +126,7 @@ export default class LoginScreen extends React.Component {
                                 onPress={this._gotoMain}
                             />
 
-                            {!this.state.isKeyboardVisible && (
-                                <View style={styles.socialLoginContainer}>
-                                    <Button
-                                        style={styles.socialButton}
-                                        bordered
-                                        rounded
-                                        icon={require('../../assets/images/google-plus.png')}
-                                        onPress={this._gotoMain}
-                                    />
-                                    <Button
-                                        style={[styles.socialButton, styles.socialButtonCenter]}
-                                        bordered
-                                        rounded
-                                        icon={require('../../assets/images/twitter.png')}
-                                        onPress={this._gotoMain}
-                                    />
-                                    <Button
-                                        style={styles.socialButton}
-                                        bordered
-                                        rounded
-                                        icon={require('../../assets/images/facebook.png')}
-                                        onPress={this._gotoMain}
-                                    />
-                                </View>
-                            )}
+                            
 
                             {!this.state.isKeyboardVisible && (
                                 <TouchableOpacity
