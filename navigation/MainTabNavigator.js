@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import BathroomScreen from '../screens/BathroomScreen';
 const iconCalendar = require('../assets/images/home.png');
 const iconMap = require('../assets/images/map.png');
 
@@ -70,6 +71,18 @@ LinksStack.navigationOptions = {
   ),
 };
 
+const  BathroomStack = createStackNavigator({
+  Bathroom: BathroomScreen,
+});
+
+BathroomStack.navigationOptions = {
+    tabBarLabel: 'Bathroom',
+    tabBarIcon: ({ focused }) => (
+      <Image resizeMode="contain" source={iconCalendar}
+      style={[ styles.tabBarIcon, focused && styles.tabBarIconFocused ]} />
+    ),
+  };
+
 const SettingsStack = createStackNavigator({
   Settings: SettingsScreen,
 });
@@ -84,8 +97,11 @@ SettingsStack.navigationOptions = {
   ),
 };
 
+
+
 export default createBottomTabNavigator({
   HomeStack,
   LinksStack,
-  SettingsStack,
+  BathroomStack,
+  SettingsStack
 });

@@ -79,6 +79,7 @@ export default class HomeScreen extends Component {
   componentDidMount() {
     // We should detect when scrolling has stopped then animate
     // We should just debounce the event listener here
+    let status = Permissions.askAsync(Permissions.LOCATION);
     this.animation.addListener(({ value }) => {
       let index = Math.floor(value / CARD_WIDTH + 0.3); // animate 30% away from landing on the next item
       if (index >= this.state.markers.length) {
@@ -146,7 +147,7 @@ export default class HomeScreen extends Component {
         >
         {this.state.markers.map((marker, index) => {
             return (
-              <Expo.MapView.Marker 
+              <Expo.MapView.Marker
               title={marker.title}
               description={marker.description}
               pinColor="green"
